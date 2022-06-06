@@ -52,7 +52,7 @@
                     };
 
                     $("#divContentProducts").html('');
-                    fetch("http://localhost:8080/api/products/cart/" + strIdProduct, requestOptions)
+                    fetch("/api/products/cart/" + strIdProduct, requestOptions)
                         .then(response => response.text())
                         .then(result => {
 
