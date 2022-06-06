@@ -1,0 +1,232 @@
+{
+    "stock": [
+        {
+            "id_product": 1,
+            "in_stock": 5,
+            "size" : [
+                {
+                    "size" : "9",
+                    "stock": 2
+                },
+                {
+                    "size" : "10",
+                    "stock": 3
+                },
+                {
+                    "size" : "11",
+                    "stock": 4
+                }
+            ]
+        },
+        {
+            "id_product": 2,
+            "in_stock": 5,
+            "size" : [
+                {
+                    "size" : "9",
+                    "stock": 2
+                },
+                {
+                    "size" : "10",
+                    "stock": 3
+                },
+                {
+                    "size" : "11",
+                    "stock": 4
+                }
+            ]
+        }
+        ,
+        {
+            "id_product": 3,
+            "in_stock": 5,
+            "size" : [
+                {
+                    "size" : "9",
+                    "stock": 2
+                },
+                {
+                    "size" : "10",
+                    "stock": 3
+                },
+                {
+                    "size" : "11",
+                    "stock": 4
+                }
+            ]
+        }
+        ,
+        {
+            "id_product": 4,
+            "in_stock": 5,
+            "size" : [
+                {
+                    "size" : "9",
+                    "stock": 2
+                },
+                {
+                    "size" : "10",
+                    "stock": 3
+                },
+                {
+                    "size" : "11",
+                    "stock": 4
+                }
+            ]
+        }
+        ,
+        {
+            "id_product": 5,
+            "in_stock": 5,
+            "size" : [
+                {
+                    "size" : "9",
+                    "stock": 2
+                },
+                {
+                    "size" : "10",
+                    "stock": 3
+                },
+                {
+                    "size" : "11",
+                    "stock": 4
+                }
+            ]
+        }
+        ,
+        {
+            "id_product": 6,
+            "in_stock": 5,
+            "size" : [
+                {
+                    "size" : "9",
+                    "stock": 2
+                },
+                {
+                    "size" : "10",
+                    "stock": 3
+                },
+                {
+                    "size" : "11",
+                    "stock": 4
+                }
+            ]
+        }
+        ,
+        {
+            "id_product": 7,
+            "in_stock": 5,
+            "size" : [
+                {
+                    "size" : "9",
+                    "stock": 2
+                },
+                {
+                    "size" : "10",
+                    "stock": 3
+                },
+                {
+                    "size" : "11",
+                    "stock": 4
+                }
+            ]
+        }
+        ,
+        {
+            "id_product": 8,
+            "in_stock": 5,
+            "size" : [
+                {
+                    "size" : "9",
+                    "stock": 2
+                },
+                {
+                    "size" : "10",
+                    "stock": 3
+                },
+                {
+                    "size" : "11",
+                    "stock": 4
+                }
+            ]
+        }
+        ,
+        {
+            "id_product": 9,
+            "in_stock": 5,
+            "size" : [
+                {
+                    "size" : "9",
+                    "stock": 2
+                },
+                {
+                    "size" : "10",
+                    "stock": 3
+                },
+                {
+                    "size" : "11",
+                    "stock": 4
+                }
+            ]
+        }
+        ,
+        {
+            "id_product": 10,
+            "in_stock": 5,
+            "size" : [
+                {
+                    "size" : "9",
+                    "stock": 2
+                },
+                {
+                    "size" : "10",
+                    "stock": 3
+                },
+                {
+                    "size" : "11",
+                    "stock": 4
+                }
+            ]
+        }
+        ,
+        {
+            "id_product": 11,
+            "in_stock": 5,
+            "size" : [
+                {
+                    "size" : "9",
+                    "stock": 2
+                },
+                {
+                    "size" : "10",
+                    "stock": 3
+                },
+                {
+                    "size" : "11",
+                    "stock": 4
+                }
+            ]
+        }
+        ,
+        {
+            "id_product": 12,
+            "in_stock": 5,
+            "size" : [
+                {
+                    "size" : "9",
+                    "stock": 2
+                },
+                {
+                    "size" : "10",
+                    "stock": 3
+                },
+                {
+                    "size" : "11",
+                    "stock": 4
+                }
+            ]
+        }
+        
+        
+    ]
+}

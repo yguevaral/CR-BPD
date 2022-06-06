@@ -1,0 +1,139 @@
+<%- include('./header', { headerName: productName }); -%>
+
+    <main>
+
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">SNEAKERS</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <%= productName%>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+
+                <div id="divContentProducts"
+                    class="row justify-content-center row-cols-1 row-cols-sm-1 row-cols-md-2 g-3">
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <script>
+
+            $(document).ready(function () {
+
+                fntShowProduct('<%= productId %>');
+
+            });
+
+            function fntShowProduct(product) {
+
+                var requestOptions = {
+                    method: 'GET',
+                    redirect: 'follow'
+                };
+
+                fetch("/api/products/" + product, requestOptions)
+                    .then(response => response.text())
+                    .then(result => {
+                        arrProduct = JSON.parse(result);
+
+                        let objCart = JSON.parse(localStorage.getItem('cart-items'));
+                        let boolInCart = (objCart.find(rowCart => rowCart.id == arrProduct.id)) != undefined;
+
+                        let strSelect = '';
+                        arrProduct.size.size.map(row => {
+                            strSelect += `<option value="${row.size}_${row.stock}" >Size ${row.size}: ${row.stock} in stock</option>`;
+                        })
+
+                        ///for( let  )
+
+                        $('#divContentProducts').append(`
+
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                
+                                <img src="${arrProduct.image_url}"  class="card-img-top" alt="..." style="cursor: pointer;">
+                                <div class="card-body"  style="cursor: pointer;">
+                                    <h6 class="card-subtitle mb-2 text-muted">${arrProduct.brand}</h6>
+                                    <h5 class="card-title">${arrProduct.name}</h5>
+                                    <p class="card-text">${arrProduct.currency} ${new Intl.NumberFormat({}).format(arrProduct.price)}</p>
+                                    <h6 class="card-subtitle mb-2 text-muted">${new Date(arrProduct.release_date_iso).toUTCString()}</h6>
+                                    
+                                    <small>Size</small>
+                                    <select id="slcSize" class="form-select" aria-label="Default select example" onchange="fntSetQuantity();">
+                                        ${strSelect}
+                                    </select>
+
+                                    <small>Quantity</small>
+                                    <select class="form-select" aria-label="Default select example" id="slcQuantity">
+                                        
+                                    </select>
+
+                                </div>
+                                <div class="card-footer bg-transparent" >
+                                    <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button id="btnAddToCart_${arrProduct.id}" type="button" class="btn btn-sm btn-outline-secondary " onclick="fntAddToCart(${arrProduct.id});">
+                                        
+                                            Add to Cart
+
+                                        </button>
+                                    </div>
+                                    </div>  
+                                </div>
+                                </div>
+                            </div>
+                    
+                        `);
+
+                        fntSetQuantity();
+
+                    })
+                    .catch(error => console.log('error', error));
+
+            }
+
+            function fntSetQuantity() {
+                
+                $('#slcQuantity').html('');
+
+                let arrSize = $('#slcSize').val().split("_");
+
+                for( let i = 1; i <= arrSize[1]; i++ ){
+                    $('#slcQuantity').append(`<option value="${i}">${i}</option>`);
+                }
+                
+            }
+
+            function fntAddToCart(idProduct) {
+
+                let objCart = JSON.parse(localStorage.getItem('cart-items'));
+
+                let arrSize = $('#slcSize').val().split("_");
+                let objProduct = {
+                    "idProduct": idProduct,
+                    "size": arrSize[0], 
+                    "quantity": $('#slcQuantity').val(),
+                };
+
+                objCart.push(objProduct);
+
+                localStorage.setItem('cart-items', JSON.stringify(objCart));
+                location.href = '/cart';
+
+            }
+
+        </script>
+
+    </main>
+
+    <%- include('./footer', { page: 'index' }); -%>

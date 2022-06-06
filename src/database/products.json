@@ -1,0 +1,124 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "NIKE DUNK LOW RETRO SE HOMBRE DH7614-001",
+            "brand": "Nike",
+            "currency": "Q",
+            "price": "1499.00",
+            "image_url": "https://cdn.shopify.com/s/files/1/1363/9583/products/DH7614-001_88c03246-61e5-43f7-b59f-18e739f61cb5_288x288.jpg?v=1654393849",
+            "release_date_iso": "2022-02-01T20:00:00.335Z",
+            "in_stock": 5
+        },
+        {
+            "id": 2,
+            "name": "AIR JORDAN 1 LOW HOMBRE 553558-052",
+            "brand": "Nike",
+            "currency": "Q",
+            "price": "1399.00",
+            "image_url": "https://cdn.shopify.com/s/files/1/1363/9583/products/553558-052_288x288.jpg?v=1654396261",
+            "release_date_iso": "2022-02-02T20:00:00.335Z",
+            "in_stock": 5
+        },
+        {
+            "id": 3,
+            "name": "AIR JORDAN 1 MID HOMBRE 554724-078",
+            "brand": "Nike",
+            "currency": "Q",
+            "price": "1599.00",
+            "image_url": "https://cdn.shopify.com/s/files/1/1363/9583/products/554724-078_jpg_288x288.jpg?v=1654396351",
+            "release_date_iso": "2022-02-03T20:00:00.335Z",
+            "in_stock": 5
+        },
+        {
+            "id": 4,
+            "name": "AIR FORCE 1 HIGH '07 LV8 VTG HOMBRE DM0209-101",
+            "brand": "Nike",
+            "currency": "Q",
+            "price": "1799.00",
+            "image_url": "https://cdn.shopify.com/s/files/1/1363/9583/products/DM0209-101_288x288.jpg?v=1654198403",
+            "release_date_iso": "2022-02-04T20:00:00.335Z",
+            "in_stock": 5
+        },
+        {
+            "id": 5,
+            "name": "NIKE AIR HUARACHE CRATER PRM HOMBRE DM0863-001",
+            "brand": "Nike",
+            "currency": "Q",
+            "price": "1699.00",
+            "image_url": "https://cdn.shopify.com/s/files/1/1363/9583/products/DM0863-001_288x288.jpg?v=1654198423",
+            "release_date_iso": "2022-02-05T20:00:00.335Z",
+            "in_stock": 5
+        },
+        {
+            "id": 6,
+            "name": "BLAZER LOW '77 VNTG HOMBRE DA6364-101",
+            "brand": "Nike",
+            "currency": "Q",
+            "price": "1099.00",
+            "image_url": "https://cdn.shopify.com/s/files/1/1363/9583/products/DA6364-101_288x288.jpg?v=1654032518",
+            "release_date_iso": "2022-02-06T20:00:00.335Z",
+            "in_stock": 5
+        },
+        {
+            "id": 7,
+            "name": "NIKE SB ZOOM BLAZER LOW PRO GT HOMBRE DC7695-004",
+            "brand": "Nike",
+            "currency": "Q",
+            "price": "999.00",
+            "image_url": "https://cdn.shopify.com/s/files/1/1363/9583/products/DC7695-004_288x288.jpg?v=1654032535",
+            "release_date_iso": "2022-02-06T20:00:00.335Z",
+            "in_stock": 5
+        },
+        {
+            "id": 8,
+            "name": "NIKE SB ZOOM BLAZER MID ISO HOMBRE DM0587-100",
+            "brand": "Nike",
+            "currency": "Q",
+            "price": "1099.00",
+            "image_url": "https://cdn.shopify.com/s/files/1/1363/9583/products/DM0587-100_288x288.jpg?v=1654032666",
+            "release_date_iso": "2022-02-07T20:00:00.335Z",
+            "in_stock": 5
+        },
+        {
+            "id": 9,
+            "name": "ZOOM BLAZER LOW PRO GT PRM HOMBRE DM8890-100",
+            "brand": "Nike",
+            "currency": "Q",
+            "price": "1099.00",
+            "image_url": "https://cdn.shopify.com/s/files/1/1363/9583/products/DM8890-100_288x288.jpg?v=1654033169",
+            "release_date_iso": "2022-02-07T20:00:00.335Z",
+            "in_stock": 5
+        },
+        {
+            "id": 10,
+            "name": "ZOOM BLAZER LOW PRO GT PRM HOMBRE DM8890-400",
+            "brand": "Nike",
+            "currency": "Q",
+            "price": "1099.00",
+            "image_url": "https://cdn.shopify.com/s/files/1/1363/9583/products/DM8890-400_288x288.jpg?v=1654033219",
+            "release_date_iso": "2022-02-08T20:00:00.335Z",
+            "in_stock": 5
+        },
+        {
+            "id": 11,
+            "name": "AIR FORCE 1 LOW RETRO HOMBRE DM0576-101",
+            "brand": "Nike",
+            "currency": "Q",
+            "price": "1899.00",
+            "image_url": "https://cdn.shopify.com/s/files/1/1363/9583/products/MG_5615copia_288x288.jpg?v=1653438715",
+            "release_date_iso": "2022-02-08T20:00:00.335Z",
+            "in_stock": 5
+        },
+        {
+            "id": 12,
+            "name": "AIR JORDAN 1 LOW HOMBRE 553558-163",
+            "brand": "Nike",
+            "currency": "Q",
+            "price": "1399.00",
+            "image_url": "https://cdn.shopify.com/s/files/1/1363/9583/products/553558-163_jpg_288x288.jpg?v=1653150000",
+            "release_date_iso": "2022-02-09T20:00:00.335Z",
+            "in_stock": 5
+        }
+    ]
+}
