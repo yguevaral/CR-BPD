@@ -1,0 +1,27 @@
+{
+    "invitaciones": [
+        {
+            "id": 1001,
+            "name": "Stephanie Martinez",
+            "cantidad": "4",
+            "invitados": [
+                "Sandra Lopez de Guevara",
+                "Roberto Guevara",
+                "Delmi Guevara",
+                "Yoselyn Guevara"
+            ]
+        },
+        {
+            "id": 1002,
+            "name": "Familia Godoy",
+            "cantidad": "4",
+            "invitados": [
+                "Roselia Guevara",
+                "Marina Godoy",
+                "Manuel",
+                "Miguel Angel Guevara",
+                "Anita Milian de Guevara"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,123 @@
+<%- include('./header', { headerName: 'Nike' }); -%>
+
+  <main>
+
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">SNEAKERS</h1>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+
+        <div id="divContentProducts" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+        </div>
+
+        <div class="row justify-content-center" >
+
+          <div class="col-1 mt-4">
+
+            <nav aria-label="...">
+              <ul class="pagination">
+                
+                <li class="page-item active" id="liPage_1" onclick="fntShowProducts(1);">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item " id="liPage_2" onclick="fntShowProducts(2);" aria-current="page">
+                  <a class="page-link" href="#">2</a>
+                </li>
+              </ul>
+            </nav>
+
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+
+    <script>
+
+      let arrProducts = [];
+      $(document).ready(function () {
+
+        fntShowProducts(1);
+
+      });
+
+      function fntShowProducts(page){
+
+        let requestOptions = {
+          method: 'GET',
+          redirect: 'follow'
+        };
+
+        $(".page-item").removeClass('active');
+        $("#liPage_"+page).addClass('active');
+
+        fetch("/api/products/list/"+page, requestOptions)
+          .then(response => response.text())
+          .then(result => {
+
+            $('#divContentProducts').html('');
+            let objCart = JSON.parse(localStorage.getItem('cart-items'));
+            arrProducts = JSON.parse(result);
+            arrProducts.map(row => {
+
+              let boolInCart = (objCart.find(rowCart => rowCart.id == row.id)) != undefined;
+
+              $('#divContentProducts').append(`
+
+              <div class="col">
+                <div class="card shadow-sm">
+                  
+                  <img src="${row.image_url}" onclick="fntViewProduct('${row.id}/${row.name}');" class="card-img-top" alt="..." style="cursor: pointer;">
+                  <div class="card-body" onclick="fntViewProduct('${row.id}/${row.name}');" style="cursor: pointer;">
+                    <h6 class="card-subtitle mb-2 text-muted">${row.brand}</h6>
+                    <h5 class="card-title">${row.name}</h5>
+                    <p class="card-text">${row.currency} ${new Intl.NumberFormat({}).format(row.price)}</p>
+                    <h6 class="card-subtitle mb-2 text-muted">${row.in_stock} in sotck</h6>
+                    
+                    
+                    
+                  </div>
+                  <div class="card-footer bg-transparent" >
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary " onclick="fntViewProduct('${row.id}/${row.name}');">
+                          See sizes
+                        </button>
+                      </div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+              
+              `);
+
+
+            });
+
+          })
+          .catch(error => console.log('error', error));
+
+      }
+
+      
+
+      function fntViewProduct(strUrl){
+        
+        location.href = '/product/'+strUrl;
+      }
+
+    </script>
+
+  </main>
+
+  <%- include('./footer', { page: 'index' }); -%>

@@ -1,123 +1,88 @@
-<%- include('./header', { headerName: 'Nike' }); -%>
+<!doctype html>
+<html lang="en">
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta property="og:image" content="/img/invitation.jpeg">
+  <title>
+    Boda Civil Stephanie & Yordi
+  </title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="/css/main.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-color: #202020; font-family: 'Quicksand', sans-serif;">
   <main>
 
-    <section class="py-5 text-center container">
-      <div class="row py-lg-5">
-        <div class="col-lg-6 col-md-8 mx-auto">
-          <h1 class="fw-light">SNEAKERS</h1>
+    <section class="py-5 py-lg-3  text-center container">
+      <div class="row py-lg-0">
+        <div class="col-lg-5 col-md-10 mx-auto">
 
+          <h3 class="" style="color: #b79649;">Stephanie Martinez</h3>
+          
+          <img src="/img/invitation.jpeg" class="me-2" style="width: 100%; height: auto;">
+
+          <button
+      style=" text-align:center; box-shadow: 2px 2px 3px #999; z-index:100; background-color: #b79649;"
+      type="button" class="btn btn-secondary shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+      Confirmar Asistencia Aqui!
+      <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+
+    </button>
+          
         </div>
       </div>
     </section>
 
-    <div class="album py-5 bg-light">
-      <div class="container">
-
-        <div id="divContentProducts" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
-        </div>
-
-        <div class="row justify-content-center" >
-
-          <div class="col-1 mt-4">
-
-            <nav aria-label="...">
-              <ul class="pagination">
-                
-                <li class="page-item active" id="liPage_1" onclick="fntShowProducts(1);">
-                  <a class="page-link" href="#">1</a>
-                </li>
-                <li class="page-item " id="liPage_2" onclick="fntShowProducts(2);" aria-current="page">
-                  <a class="page-link" href="#">2</a>
-                </li>
-              </ul>
-            </nav>
-
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
         </div>
-
-
       </div>
     </div>
 
     <script>
 
-      let arrProducts = [];
+
       $(document).ready(function () {
 
-        fntShowProducts(1);
 
       });
-
-      function fntShowProducts(page){
-
-        let requestOptions = {
-          method: 'GET',
-          redirect: 'follow'
-        };
-
-        $(".page-item").removeClass('active');
-        $("#liPage_"+page).addClass('active');
-
-        fetch("/api/products/list/"+page, requestOptions)
-          .then(response => response.text())
-          .then(result => {
-
-            $('#divContentProducts').html('');
-            let objCart = JSON.parse(localStorage.getItem('cart-items'));
-            arrProducts = JSON.parse(result);
-            arrProducts.map(row => {
-
-              let boolInCart = (objCart.find(rowCart => rowCart.id == row.id)) != undefined;
-
-              $('#divContentProducts').append(`
-
-              <div class="col">
-                <div class="card shadow-sm">
-                  
-                  <img src="${row.image_url}" onclick="fntViewProduct('${row.id}/${row.name}');" class="card-img-top" alt="..." style="cursor: pointer;">
-                  <div class="card-body" onclick="fntViewProduct('${row.id}/${row.name}');" style="cursor: pointer;">
-                    <h6 class="card-subtitle mb-2 text-muted">${row.brand}</h6>
-                    <h5 class="card-title">${row.name}</h5>
-                    <p class="card-text">${row.currency} ${new Intl.NumberFormat({}).format(row.price)}</p>
-                    <h6 class="card-subtitle mb-2 text-muted">${row.in_stock} in sotck</h6>
-                    
-                    
-                    
-                  </div>
-                  <div class="card-footer bg-transparent" >
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary " onclick="fntViewProduct('${row.id}/${row.name}');">
-                          See sizes
-                        </button>
-                      </div>
-                    </div>  
-                  </div>
-                </div>
-              </div>
-              
-              `);
-
-
-            });
-
-          })
-          .catch(error => console.log('error', error));
-
-      }
-
-      
-
-      function fntViewProduct(strUrl){
-        
-        location.href = '/product/'+strUrl;
-      }
 
     </script>
 
   </main>
 
-  <%- include('./footer', { page: 'index' }); -%>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>
