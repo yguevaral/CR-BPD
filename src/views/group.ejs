@@ -8,8 +8,9 @@
   <meta property="og:image" content="/img/invitation-min.jpeg">
   <meta property="og:title" content="Boda S&Y">
   <title>
-    Boda S&Y
+    S&Y
   </title>
+  <meta name="description" content="Stephani & Yordi: Te invitamos a nuestra boda">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -205,6 +206,7 @@
             "url": "https://appx-server.herokuapp.com/api/login/",
             "method": "POST",
             "timeout": 0,
+            "async": false,
             "headers": {
               "Content-Type": "application/json"
             },
@@ -217,11 +219,13 @@
           let boolCheck = false;
           $.ajax(settings).done(function (response) {
             
-            if( response['ok'] == true ){
+            if( response.ok ){
               boolCheck = true;
             }
 
           });
+
+          console.log(boolCheck)
 
           $("#olListInvitados").append(`
             <li class="list-group-item d-flex justify-content-between align-items-start"
@@ -274,6 +278,7 @@
               "url": "https://appx-server.herokuapp.com/api/login/new",
               "method": "POST",
               "timeout": 0,
+              "async": false,
               "headers": {
                 "Content-Type": "application/json"
               },
