@@ -196,6 +196,7 @@
 
         console.log(rows);
 
+        let boolCheckCompletado = true;
         let count = 1;
         rows['invitados'].map(userName => {
 
@@ -222,8 +223,6 @@
 
           });
 
-          console.log(boolCheck);
-
           $("#olListInvitados").append(`
             <li class="list-group-item d-flex justify-content-between align-items-start"
               style="background-color: #202020; border: 0;">
@@ -244,9 +243,21 @@
             </li>
           `)
           count++;
-          
+
+          if( boolCheck == false ){
+
+            boolCheckCompletado = false;
+
+          }
+
         });
 
+        if( boolCheckCompletado ){
+
+          $("#divContent").hide();
+          $("#divContentConfirm").show();
+
+        }
       });
 
       function fntSendConfirmation() {
