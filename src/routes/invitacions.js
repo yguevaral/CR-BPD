@@ -2,7 +2,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { getInvitacions } = require('../controllers/invitacions');
+const { getInvitacions} = require('../controllers/invitacions');
 
 router.get('/group/:group', getInvitacions);
 

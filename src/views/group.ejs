@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta property="og:image" content="/img/invitation.jpeg">
+  <meta property="og:title" content="Boda Civil S&Y">
+  <title>
+    Boda Civil S&Y
+  </title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="/css/main.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-color: #202020; font-family: 'Quicksand', sans-serif;">
+  <main>
+
+    <section class="  text-center container">
+      <div class="row py-lg-0">
+        <div class="col-lg-5 col-md-10 mx-auto" id="divContentConfirm" style="display: none;">
+
+          <div class="row">
+            <div class="col my-0">
+              <h5 class="" style="color: black; background-color: #b79649; margin-bottom: 0; text-align: center;">
+                25/09/2022
+                <br>
+                Casa Escobar, Paseo Cayala 6PM
+              </h5>
+            </div>
+          </div>
+
+          <div style="position: relative;">
+
+            <img src="/img/teesperamos-min.jpg" class="me-2" style="width: 100%; height: auto;">
+
+            <div style="position: absolute; top: 1%; left:0px; width: 100%">
+              <h3 class="" style="color: black;">TE ESPERAMOS!!!</h3>
+            </div>
+
+            <div style="position: absolute; bottom: 0; left:0px; width: 100%">
+              <h5 class="" style="color: black; background-color: #b79649; margin-bottom: 0;">
+                Si deseas hacernos un presente, estos son nuestro numeros de cuenta:
+              </h5>
+            </div>
+
+          </div>
+          <br>
+          <div class="row">
+            <div class="col">
+              <p style="color: #b79649; text-align: center; font-size: 18px;">
+                Banco Industrial
+                <br>
+                Stephanie Martinvez
+                <br>
+                Monetaria
+                <br>
+                234324324324
+              </p>
+            </div>
+            <div class="col">
+              <p style="color: #b79649; text-align: center; font-size: 18px;">
+                Banco BAC
+                <br>
+                Yordi Guevara
+                <br>
+                Monetaria
+                <br>
+                234324324324
+              </p>
+            </div>
+          </div>
+
+          <br><br><br><br><br>
+          <div class="row">
+            <div class="col my-0">
+              <h5 class="" style="color: black; background-color: #b79649; margin-bottom: 0; text-align: center;">
+                Dress Code Wedding
+              </h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img src="/img/dressCode-min.jpeg" class="me-2" style="width: 100%; height: auto;">
+            </div>
+          </div>
+
+
+
+        </div>
+
+        <div class="col-lg-5 col-md-10 mx-auto py-5 py-lg-3" id="divContent" style="">
+
+          <h3 class="" style="color: #b79649;">
+            <%- arrInvitations['name'] %>
+          </h3>
+
+          <img src="/img/invitation-min.jpeg" class="me-2" style="width: 100%; height: auto;">
+
+          <button style=" text-align:center; box-shadow: 2px 2px 3px #999; z-index:100; background-color: #b79649;"
+            type="button" class="btn btn-secondary shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+            Confirmar Asistencia Aqui!
+            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+    </button>
+    <style>
+      .form-check-input:checked {
+        background-color: #b79649;
+        border-color: #b79649;
+      }
+    </style>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background-color: #202020; opacity: 1">
+          <div class="modal-body">
+
+            <p style="color: #b79649">
+              Selecciona Si para confirmar tu Asistencia.
+            </p>
+            <ol class="list-group" style="background-color: #202020;" id="olListInvitados">
+
+
+              <!--
+              <li class="list-group-item d-flex justify-content-between align-items-start"
+                style="background-color: #202020; border: 0;">
+                <div class="ms-2 me-auto " style="color: #b79649">
+                  1. Delmi Guevara
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                    value="option1">
+                  <label class="form-check-label" for="inlineRadio1" style="color: #b79649">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" checked
+                    value="option2">
+                  <label class="form-check-label" for="inlineRadio2" style="color: #b79649">No</label>
+                </div>
+
+
+              </li>
+            -->
+
+            </ol>
+
+          </div>
+          <div class="modal-footer text-center">
+
+            <button onclick="fntSendConfirmation();" type="button" class="btn btn-primary border-0"
+              style="background-color: #b79649">Guardar y
+              Enviar</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalAlertOk" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background-color: #202020; opacity: 1">
+          <div class="modal-body">
+
+            <br>
+            <p style="color: #b79649; text-align: center;">
+              Asistencia Guardada.
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+
+
+      $(document).ready(function () {
+
+        var rows = JSON.parse('<%- JSON.stringify(arrInvitations) %>');
+
+        console.log(rows);
+
+        let count = 1;
+        rows['invitados'].map(userName => {
+
+          
+          var settings = {
+            "url": "https://appx-server.herokuapp.com/api/login/",
+            "method": "POST",
+            "timeout": 0,
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "data": JSON.stringify({
+              "password": "123",
+              "email": userName.toLowerCase().replace(/\s+/g, '')+"@test.com"
+            }),
+          };
+
+          let boolCheck = false;
+          $.ajax(settings).done(function (response) {
+            
+            if( response['ok'] == true ){
+              boolCheck = true;
+            }
+
+          });
+
+          console.log(boolCheck);
+
+          $("#olListInvitados").append(`
+            <li class="list-group-item d-flex justify-content-between align-items-start"
+              style="background-color: #202020; border: 0;">
+              <div class="ms-2 me-auto " style="color: #b79649">
+                ${count}. ${userName}
+                <input class="hidUserName" type="hidden" value="${userName}" id="userName_${count}">
+              </div>
+              <div class="form-check form-check-inline">
+                <input ${( boolCheck ? "checked" : "" )} class="form-check-input" type="radio" name="userConfirmation_${count}" id="userConfirmation_${count}_1"
+                  value="Y">
+                <label class="form-check-label" for="inlineRadio1" style="color: #b79649">Si</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input ${( boolCheck ? "" : "checked" )} class="form-check-input" type="radio" name="userConfirmation_${count}" id="userConfirmation_${count}_2"
+                  value="N">
+                <label class="form-check-label" for="inlineRadio2" style="color: #b79649">No</label>
+              </div>
+            </li>
+          `)
+          count++;
+          
+        });
+
+      });
+
+      function fntSendConfirmation() {
+
+        $(".hidUserName").each(function () {
+
+          let arrExplode = this.id.split('_');
+          let strUserName = $('#userName_'+arrExplode[1]).val();
+          let strAcept = $('input[name="userConfirmation_'+arrExplode[1]+'"]:checked').val();
+
+          if( strAcept == "Y" ){
+
+            var settings = {
+              "url": "https://appx-server.herokuapp.com/api/login/new",
+              "method": "POST",
+              "timeout": 0,
+              "headers": {
+                "Content-Type": "application/json"
+              },
+              "data": JSON.stringify({
+                "nombre": strUserName,
+                "password": "123",
+                "email": strUserName.toLowerCase().replace(/\s+/g, '')+"@test.com",
+                "sintoma": "--",
+                "edad": "0"
+              }),
+            };
+
+            /*
+            $.ajax(settings).done(function (response) {
+              console.log(response);
+            });
+            */
+          }
+
+        });
+
+        $("#exampleModal").modal('hide');
+        $("#modalAlertOk").modal('show');
+
+        setTimeout( hideAlert, 1000)
+
+
+      }
+
+      function hideAlert(){
+        $("#modalAlertOk").modal('hide');
+        $("#divContent").hide();
+        $("#divContentConfirm").show();
+      }
+
+    </script>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
