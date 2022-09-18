@@ -25,7 +25,7 @@ router.get('/:group', (req, res) => {
 
     if( arrGroup.id ){
         console.log("arrGroup-->", arrGroup)
-        res.render("group",  { title: 'First Website', arrInvitations: arrGroup });
+        res.render("group",  { title: 'First Website', arrInvitations: arrGroup, idgroup:group });
         return false;
     }
     else{
