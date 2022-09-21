@@ -331,6 +331,16 @@
             "invitados": [
                 "Zoily Pérez"
             ]
+        },
+        {
+            "id": 1034,
+            "name": "Daniel y Vero",
+            "nameSub": "Los invitamos a nuestra boda",
+            "cantidad": "4",
+            "invitados": [
+                "Daniel Ramirez",
+                "Veronica Lopez"
+            ]
         }
     ]
 }
